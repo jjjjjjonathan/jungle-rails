@@ -5,7 +5,25 @@
   </header>
 
   <div class="order-summary jumbotron">
-    <h4>Thank you for your order!</h4>
+    <h4>Thank you for your order! The confirmation email with a copy of the invoice has been sent to <%= @order.email %>.</h4>
+  </div>
+
+  <div class="panel panel-default items">
+    <table class="table table-bordered">
+      <thead>
+        <tr>
+          <th colspan="2">Product</th>
+          <th>Unit</th>
+          <th>Quantity</th>
+          <th>Price</th>
+        </tr>
+      </thead>
+      <tbody>
+        <% @order.line_items.each do |item| %>
+          <%= render 'item', product: item.product, quantity: item[:quantity].to_i %>
+        <% end %>
+      </tbody>
+    </table>
   </div>
 
   <%= link_to "Continue Shopping", root_path, class: 'btn btn-lg btn-primary' %>
