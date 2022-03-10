@@ -1,12 +1,16 @@
 // Vendor
-@import "bootstrap-sprockets";
-@import "bootstrap";
-@import "font-awesome";
+@import 'bootstrap-sprockets';
+@import 'bootstrap';
+@import 'font-awesome';
 
 // App
-@import "products";
+@import 'products';
 
 // Global
+html {
+  overflow-y: overlay;
+}
+
 body {
   padding-top: 70px;
 }
