@@ -1,6 +1,6 @@
 require 'rails_helper'
 
-RSpec.feature "", type: :feature, js: true do
+RSpec.feature "Visitor clicks on item to get more details", type: :feature, js: true do
 
   # SETUP
   before :each do
