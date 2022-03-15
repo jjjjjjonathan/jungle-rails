@@ -1,6 +1,6 @@
 class CartsController < ApplicationController
 
-  before_filter :authorize # (this is to prevent logged out users to go to cart)
+  # before_filter :authorize # (this is to prevent logged out users to go to cart)
 
   def show
   end
