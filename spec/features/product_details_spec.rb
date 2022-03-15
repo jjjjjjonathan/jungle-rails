@@ -20,9 +20,9 @@ RSpec.feature "Visitor clicks on item to get more details", type: :feature, js: 
   scenario "should click on the first product" do
     # ACT
     visit root_path
-
-    # VERIFY
     find('a.pull-right', match: :first).click
+    # VERIFY
+    
     expect(page).to have_css('.product-detail')
 
     # DEBUG
