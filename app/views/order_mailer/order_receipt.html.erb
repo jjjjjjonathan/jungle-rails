@@ -1,0 +1,13 @@
+<h1>Thanks for order with Jungle!</h1>
+<p>Hi, <%= @user.given_name %>,</p>
+<br>
+<p>Below is your receipt for order #<%= @order.id %></p>
+
+<br>
+<% @order.line_items.each do |item| %>
+  <p><strong><%= item.product.name %></strong>: <%= item.quantity %> x <%= humanized_money_with_symbol item.product.price %> = <%= humanized_money_with_symbol item.product.price * item.quantity %></p>
+<% end %>
+<br>
+<p><strong>TOTAL: <%= humanized_money_with_symbol @order.total %></strong></p>
+<br>
+<p>Thanks for shopping with us at Jungle. Come back soon!</p>
