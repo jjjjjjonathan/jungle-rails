@@ -12,6 +12,16 @@ This project was made to mimic a realistic situation where I would join a new te
 - Writing tests for the home page, product details, adding to cart methods, product models, and user models
 - Using ActionMailer to send order receipts after a sale is completed
 
+## Stack
+
+- Ruby on Rails 4.2
+- ActiveRecord
+- ActionMailer
+- ERB
+- RSpec
+- Capybara
+- Poltergeist
+
 ## Setup
 
 1. Run `bundle install` to install dependencies
