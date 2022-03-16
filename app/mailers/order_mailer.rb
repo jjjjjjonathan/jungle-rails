@@ -1,5 +1,5 @@
 class OrderMailer < ApplicationMailer
-  default from: 'no-replay@jungle.com'
+  default from: 'no-reply@jungle.com'
 
   def order_receipt(user, order)
     @user = user
