@@ -7,4 +7,7 @@
 <% @order.line_items.each do |item| %>
   <p><strong><%= item.product.name %></strong>: <%= item.quantity %> x <%= humanized_money_with_symbol item.product.price %> = <%= humanized_money_with_symbol item.product.price * item.quantity %></p>
 <% end %>
-<p><strong>TOTAL: <%= humanized_money_with_symbol @order.line_items.inject(0) { |sum, item| sum + item.product.price * item.quantity } %></strong></p>
+<br>
+<p><strong>TOTAL: <%= humanized_money_with_symbol @order.total %></strong></p>
+<br>
+<p>Thanks for shopping with us at Jungle. Come back soon!</p>
